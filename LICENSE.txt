@@ -1,0 +1,55 @@
+OneOS Non-Commercial License (ONCL) v1.0
+
+Copyright (c) 2025 DudasCorp
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files ("OneOS"), to use, study, modify, copy, and distribute the software, subject to the following conditions:
+
+1. Attribution
+
+The original copyright notice and this license must be included in all copies and substantial portions of the software.
+
+2. Commercial Restriction
+
+You may not:
+
+* Sell OneOS.
+* Sell modified versions of OneOS.
+* Include OneOS in a commercial product or service.
+* Generate revenue directly from OneOS.
+* Offer paid distributions of OneOS.
+
+3. Ownership
+
+You may not:
+
+* Claim authorship of the original project.
+* Remove original copyright notices.
+* Misrepresent the origin of the software.
+
+4. AI Restriction
+
+The software, source code, documentation, assets, and associated materials may not be used for:
+
+* AI training
+* Machine learning training
+* Dataset creation
+* Model fine-tuning
+* Data mining for AI systems
+
+5. Forks and Modifications
+
+Forking and modification are permitted provided that:
+
+* Attribution is maintained.
+* This license remains included.
+* The modified project clearly indicates that changes were made.
+
+6. Warranty
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+
+7. Liability
+
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM THE SOFTWARE.
+
+By using, modifying, or distributing OneOS, you agree to the terms of this license.
