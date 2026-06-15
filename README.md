@@ -143,10 +143,6 @@ You may not:
 
 ---
 
-## Current Status
-
-OneOS is not yet a functional operating system. The project is currently focused on architecture design, research, tooling, and infrastructure before implementation begins.
-
 ---
 
 ## License
