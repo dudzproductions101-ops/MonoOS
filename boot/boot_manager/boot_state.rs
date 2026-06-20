@@ -4,7 +4,7 @@
 //! an NVRAM partition or the last sector of the MISC partition, matching the
 //! Android BCB layout used by many ARM SoCs).
 //!
-//! The on-disk structure is a 2 KiB block:
+//! The on-disk structure is a 2 KiB block: 
 //!   - 32 bytes: magic + version + CRC32
 //!   - 256 bytes: boot command string (NUL-terminated)
 //!   - 256 bytes: status message from last operation
