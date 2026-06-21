@@ -1,8 +1,8 @@
-OneOS Non-Commercial License (ONCL) v1.0
+MonoOS Non-Commercial License (ONCL) v1.0
 
-Copyright (c) 2025 DudasCorp
+Copyright (c) 2025 dudas131
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files ("OneOS"), to use, study, modify, copy, and distribute the software, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files ("MonoOS"), to use, study, modify, copy, and distribute the software, subject to the following conditions:
 
 1. Attribution
 
@@ -12,11 +12,11 @@ The original copyright notice and this license must be included in all copies an
 
 You may not:
 
-* Sell OneOS.
-* Sell modified versions of OneOS.
-* Include OneOS in a commercial product or service.
-* Generate revenue directly from OneOS.
-* Offer paid distributions of OneOS.
+* Sell MonoOS.
+* Sell modified versions of MonoOS.
+* Include MonoOS in a commercial product or service.
+* Generate revenue directly from MonoOS.
+* Offer paid distributions of MonoOS.
 
 3. Ownership
 
@@ -52,4 +52,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM THE SOFTWARE.
 
-By using, modifying, or distributing OneOS, you agree to the terms of this license.
+By using, modifying, or distributing MonoOS, you agree to the terms of this license.
