@@ -1,0 +1,14 @@
+{
+  "name": "monoos-ui-tests",
+  "version": "1.0.0",
+  "description": "MonoOS UI component tests using Squish / QtTest / Playwright",
+  "scripts": {
+    "test":       "node run_tests.js",
+    "test:quick": "node run_tests.js --suite smoke",
+    "test:ci":    "node run_tests.js --ci --reporter junit"
+  },
+  "devDependencies": {
+    "playwright": "^1.44.0"
+  },
+  "engines": { "node": ">=20" }
+}

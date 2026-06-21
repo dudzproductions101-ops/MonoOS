@@ -1,0 +1,9 @@
+[package]
+name    = "boot_to_userspace_test"
+version = "0.1.0"
+edition = "2021"
+
+[[test]]
+name    = "boot_to_userspace"
+path    = "tests/boot_to_userspace.rs"
+harness = true
