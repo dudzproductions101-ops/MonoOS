@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200"
+     width="240" height="200">
+  <!-- Wi-Fi arcs (faded/broken) -->
+  <path d="M120 140 Q120 100 80  80" fill="none" stroke="#3A3A3C" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+  <path d="M120 140 Q120  80 60  55" fill="none" stroke="#3A3A3C" stroke-width="4" stroke-linecap="round" opacity="0.2"/>
+  <path d="M120 140 Q120 100 160 80" fill="none" stroke="#3A3A3C" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+  <path d="M120 140 Q120  80 180 55" fill="none" stroke="#3A3A3C" stroke-width="4" stroke-linecap="round" opacity="0.2"/>
+
+  <!-- Dot -->
+  <circle cx="120" cy="140" r="7" fill="#FF3B30"/>
+
+  <!-- X cross over the signal -->
+  <line x1="96" y1="56" x2="144" y2="104" stroke="#FF3B30" stroke-width="5" stroke-linecap="round"/>
+  <line x1="144" y1="56" x2="96"  y2="104" stroke="#FF3B30" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Label -->
+  <text x="120" y="178" text-anchor="middle"
+        font-family="system-ui,sans-serif" font-size="14" fill="#8E8E93">
+    No network connection
+  </text>
+</svg>
