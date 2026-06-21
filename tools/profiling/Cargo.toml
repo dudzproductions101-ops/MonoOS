@@ -1,0 +1,16 @@
+[package]
+name        = "monoos-frame-timing"
+version     = "1.0.0"
+edition     = "2021"
+authors     = ["DudasCorp"]
+description = "MonoOS render-engine frame-timing analyzer (jank report and histogram)."
+license     = "SEE LICENSE IN ../../LICENSE.txt"
+
+[[bin]]
+name = "frame_timing"
+path = "frame_timing.rs"
+
+[profile.release]
+opt-level     = 2
+lto           = true
+codegen-units = 1

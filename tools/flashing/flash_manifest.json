@@ -1,0 +1,51 @@
+{
+  "manifest_version": 1,
+  "device": "monoos-generic-arm64",
+  "build_id": "MonoOS-1.0.0-eng",
+  "description": "Default flash manifest for a full MonoOS image set. Paths are relative to this manifest's directory (build/release/ in a real build tree).",
+  "images": [
+    {
+      "partition": "boot",
+      "file": "boot.img",
+      "sha256": "",
+      "required": true,
+      "ab_partition": true
+    },
+    {
+      "partition": "system",
+      "file": "system.img",
+      "sha256": "",
+      "required": true,
+      "ab_partition": true
+    },
+    {
+      "partition": "vendor",
+      "file": "vendor.img",
+      "sha256": "",
+      "required": true,
+      "ab_partition": true
+    },
+    {
+      "partition": "vbmeta",
+      "file": "vbmeta.img",
+      "sha256": "",
+      "required": false,
+      "ab_partition": true
+    },
+    {
+      "partition": "dtbo",
+      "file": "dtbo.img",
+      "sha256": "",
+      "required": false,
+      "ab_partition": true
+    },
+    {
+      "partition": "recovery",
+      "file": "recovery.img",
+      "sha256": "",
+      "required": false,
+      "ab_partition": false
+    }
+  ],
+  "notes": "sha256 fields are populated by the release build pipeline (build/scripts/build_bootloader.sh and related signing steps) before this manifest is shipped. An empty sha256 causes flash_image.py to skip verification with a warning -- do not ship a release manifest with empty checksums."
+}
