@@ -1,0 +1,18 @@
+[package]
+name    = "basicapp"
+version = "1.0.0"
+edition = "2021"
+autobins = false
+
+[lib]
+crate-type = ["cdylib"]
+path        = "src/main.rs"
+
+[dependencies]
+monoos-sdk = { version = "1.0", path = "../../rust" }
+
+[profile.release]
+opt-level     = "z"
+lto           = true
+codegen-units = 1
+strip         = true
