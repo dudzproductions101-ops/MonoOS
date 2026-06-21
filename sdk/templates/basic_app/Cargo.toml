@@ -1,0 +1,16 @@
+[package]
+name    = "basicapp"
+version = "1.0.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+oneos-sdk = { version = "1.0", path = "../../../../sdk" }
+
+[profile.release]
+opt-level     = "z"
+lto           = true
+codegen-units = 1
+strip         = true

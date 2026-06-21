@@ -1,0 +1,28 @@
+# OneOS Package Manifest – Basic App Template
+# Replace all occurrences of "com.example.basicapp" with your package name.
+
+[package]
+name         = "Basic App"
+package_name = "com.example.basicapp"
+version_name = "1.0.0"
+version_code = 1
+min_sdk      = 1
+target_sdk   = 1
+label        = "Basic App"
+icon         = "res/icons/app_icon.svg"
+description  = "A minimal OneOS application."
+
+[build]
+rust_edition = "2021"
+
+[[activities]]
+name     = "com.example.basicapp.MainActivity"
+label    = "Basic App"
+main     = true
+exported = true
+
+# Declare only the permissions your app actually uses.
+# Remove or add entries as needed.
+# [[permissions]]
+# name   = "CAMERA"
+# reason = "Used to take photos."
