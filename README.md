@@ -1,20 +1,20 @@
-# OneOS
+# MonoOS
 
 **by DudasCorp**
 
 A privacy-focused, security-first mobile operating system built on the Linux kernel.
 
-> **Early Development:** OneOS is currently an experimental project focused on learning operating system development, mobile architecture, low-level programming, and system design.
+> **Early Development:** MonoOS is currently an experimental project focused on learning operating system development, mobile architecture, low-level programming, and system design.
 
 ---
 
 ## About
 
-I've always wanted to learn how to build an operating system from scratch, and I decided this summer was the perfect time to finally start. With plenty of free time, curiosity, and a questionable amount of sanity i started making OneOS with my four friends.
+I've always wanted to learn how to build an operating system from scratch, and I decided this summer was the perfect time to finally start. With plenty of free time, curiosity, and a questionable amount of sanity i started making MonoOS with my four friends.
 
-OneOS is an open-source mobile operating system designed around privacy, security, transparency, and user control. The goal is to create a modern smartphone OS that minimizes telemetry, maximizes security, and gives users full visibility into how their device works.
+MonoOS is an open-source mobile operating system designed around privacy, security, transparency, and user control. The goal is to create a modern smartphone OS that minimizes telemetry, maximizes security, and gives users full visibility into how their device works.
 
-Built on the Linux kernel, OneOS combines modern mobile technologies with a security-first architecture, providing a platform that is modular, customizable, and developer-friendly.
+Built on the Linux kernel, MonoOS combines modern mobile technologies with a security-first architecture, providing a platform that is modular, customizable, and developer-friendly.
 
 This project is also a personal learning journey into:
 
@@ -73,12 +73,12 @@ This project is also a personal learning journey into:
 
 ## Planned Architecture
 
-```text
+```
 Apps
  ↓
-OneUI
+MonoUI
  ↓
-OneFramework
+MonoFramework
  ↓
 System Services
  ↓
@@ -93,19 +93,17 @@ Hardware
 
 ## Project Structure
 
-```text
-OneOS/
+```
+MonoOS/
 ├── boot/
 ├── kernel/
 ├── drivers/
 ├── hal/
-├── firmware/
 ├── init/
-├── system/
 ├── services/
 ├── framework/
-├── security/
-├── privacy/
+├── security/        (includes security/crypto, the encryption layer)
+├── packages/         (OPK package manager + installer)
 ├── networking/
 ├── telephony/
 ├── multimedia/
@@ -117,6 +115,10 @@ OneOS/
 ├── tools/
 └── docs/
 ```
+
+See `docs/architecture.md` for what each directory actually contains and
+which parts build/test today, and `docs/roadmap.md` for what's planned
+next.
 
 ---
 
@@ -134,20 +136,34 @@ You are free to:
 
 You may not:
 
-* Sell OneOS
-* Commercialize OneOS
-* Sell modified versions of OneOS
-* Claim ownership of OneOS
+* Sell MonoOS
+* Commercialize MonoOS
+* Sell modified versions of MonoOS
+* Claim ownership of MonoOS
 * Remove attribution to the original authors
-* Use OneOS or its source code for AI training, dataset creation, or machine learning purposes
+* Use MonoOS or its source code for AI training, dataset creation, or machine learning purposes
 
 ---
+
+## Current Status
+
+MonoOS is not yet a bootable, functional operating system, but it has moved
+past pure architecture sketching: several components now build and pass
+automated tests, including the boot manager and verified-boot orchestration
+logic, the full app SDK with safe Rust bindings, a real AES-256-GCM /
+Ed25519 encryption layer, the OPK package manager, and the privacy engine
+(tracker blocking, telemetry guarding, camera/mic/network monitors).
+
+See `docs/architecture.md` for a directory-by-directory breakdown of what's
+implemented and tested vs. still a stub, and `docs/roadmap.md` for what's
+being worked on next (app store UI, real bootloader-stage crypto, Android-
+parity features like intents and accessibility services, and more).
 
 ---
 
 ## License
 
-OneOS is distributed under the OneOS Non-Commercial License.
+MonoOS is distributed under the MonoOS Non-Commercial License.
 
 See the LICENSE file for complete terms.
 
