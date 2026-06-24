@@ -1,4 +1,4 @@
-//! monoos_packages – MonoOS package manager: OPK install pipeline, package
+//! monoos_packages – MonoOS package manager: OPK install pipeline, package 
 //! database, repository sync, and signature verification.
 //!
 //! Module files live in their existing subdirectories
