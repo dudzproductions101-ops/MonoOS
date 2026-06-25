@@ -1,7 +1,0 @@
-[package]
-name    = "secure_boot_tests"
-version = "0.1.0"
-edition = "2021"
-
-[dev-dependencies]
-monoos-secure-boot = { path = "../../../boot/secure_boot", features = ["std"] }

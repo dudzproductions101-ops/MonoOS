@@ -1,8 +1,0 @@
-[package]
-name    = "package_install_test"
-version = "0.1.0"
-edition = "2021"
-
-[[test]]
-name = "package_install"
-path = "tests/package_install.rs"

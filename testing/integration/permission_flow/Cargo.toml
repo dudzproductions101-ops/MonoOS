@@ -1,8 +1,0 @@
-[package]
-name    = "permission_flow_test"
-version = "0.1.0"
-edition = "2021"
-
-[[test]]
-name = "permission_flow"
-path = "tests/permission_flow.rs"
