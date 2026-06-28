@@ -1,0 +1,15 @@
+[package]
+name        = "package_service"
+version     = "0.1.0"
+edition     = "2021"
+
+[[bin]]
+name = "package_service"
+path = "src/main.rs"
+
+[lib]
+name = "package_service_lib"
+path = "src/lib.rs"
+
+[dependencies]
+libc = "0.2"

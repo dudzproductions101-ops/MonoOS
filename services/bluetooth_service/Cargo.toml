@@ -1,0 +1,15 @@
+[package]
+name        = "bluetooth_service"
+version     = "0.1.0"
+edition     = "2021"
+
+[[bin]]
+name = "bluetooth_service"
+path = "src/main.rs"
+
+[lib]
+name = "bluetooth_service_lib"
+path = "src/lib.rs"
+
+[dependencies]
+libc = "0.2"

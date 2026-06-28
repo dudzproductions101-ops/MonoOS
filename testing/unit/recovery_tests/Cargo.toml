@@ -1,0 +1,7 @@
+[package]
+name    = "recovery_tests"
+version = "0.1.0"
+edition = "2021"
+
+[dev-dependencies]
+monoos-recovery = { path = "../../../boot/recovery", features = ["std"] }

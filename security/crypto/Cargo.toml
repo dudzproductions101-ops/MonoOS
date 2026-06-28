@@ -1,0 +1,21 @@
+[package]
+name        = "monoos-crypto"
+version     = "1.0.0"
+edition     = "2021"
+authors     = ["DudasCorp"]
+description = "MonoOS encryption primitives: scoped-storage file encryption, package signature verification, and key management, built on audited RustCrypto crates"
+license     = "SEE LICENSE IN ../../LICENSE.txt"
+
+[lib]
+name = "monoos_crypto"
+path = "src/lib.rs"
+
+[dependencies]
+sha2           = "0.10"
+aes-gcm        = "0.10"
+hkdf           = "0.12"
+ed25519-dalek  = { version = "=2.1.1", features = ["rand_core"] }
+rand_core      = { version = "0.6", features = ["std"] }
+zeroize        = { version = "=1.7.0" }
+base64ct       = { version = "=1.6.0", features = ["alloc"] }
+argon2         = "0.5"

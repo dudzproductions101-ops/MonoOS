@@ -1,0 +1,3 @@
+[workspace]
+members = ["hal_probe", "sensor_calibration", "display_test", "audio_loopback"]
+resolver = "2"

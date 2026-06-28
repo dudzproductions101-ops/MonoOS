@@ -1,0 +1,29 @@
+[workspace]
+members = [
+    "permission_service",
+    "system_server",
+    "package_service",
+    "account_service",
+    "app_service",
+    "audio_service",
+    "bluetooth_service",
+    "camera_service",
+    "gps_service",
+    "network_service",
+    "power_service",
+    "settings_service",
+    "storage_service",
+    "update_service",
+    "wifi_service",
+]
+
+# Shared dependency versions so each service Cargo.toml can use
+# { workspace = true } once they're wired up.
+[workspace.dependencies]
+libc = "0.2"
+
+[profile.release]
+opt-level     = "z"   # minimize binary size for /system/bin/
+lto           = true
+codegen-units = 1
+strip         = true

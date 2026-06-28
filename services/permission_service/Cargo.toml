@@ -1,0 +1,20 @@
+[package]
+name        = "permission_service"
+version     = "0.1.0"
+edition     = "2021"
+description = "MonoOS runtime permission broker — mediates kernel permission grants via /dev/monoos"
+
+[[bin]]
+name = "permission_service"
+path = "src/main.rs"
+
+[lib]
+name = "permission_service_lib"
+path = "src/lib.rs"
+
+[dependencies]
+libc = "0.2"
+
+[features]
+# Enable the kernel_integration tests in kernel_bridge (requires /dev/monoos).
+kernel_integration = []

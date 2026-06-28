@@ -1,0 +1,13 @@
+[workspace]
+members = [
+    "boot_manager_tests",
+    "secure_boot_tests",
+    "permission_tests",
+    "networking_tests",
+    "storage_tests",
+    "recovery_tests",
+]
+resolver = "2"
+
+[profile.test]
+opt-level = 1

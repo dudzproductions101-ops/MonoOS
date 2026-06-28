@@ -1,0 +1,3 @@
+[workspace]
+members = ["boot_to_userspace", "permission_flow", "package_install"]
+resolver = "2"

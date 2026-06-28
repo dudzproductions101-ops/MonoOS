@@ -1,0 +1,15 @@
+[package]
+name        = "camera_service"
+version     = "0.1.0"
+edition     = "2021"
+
+[[bin]]
+name = "camera_service"
+path = "src/main.rs"
+
+[lib]
+name = "camera_service_lib"
+path = "src/lib.rs"
+
+[dependencies]
+libc = "0.2"
