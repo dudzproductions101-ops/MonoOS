@@ -1,0 +1,27 @@
+[package]
+name    = "basicapp"
+version = "1.0.0"
+edition = "2021"
+autobins = false
+
+[lib]
+crate-type = ["cdylib"]
+path        = "src/main.rs"
+
+[dependencies]
+monoos-sdk = { version = "1.0", path = "../../rust" }
+
+[features]
+# Forwards to monoos-sdk's mock-runtime feature so this template can be
+# built and run on a host dev machine (`cargo build --features
+# mock-runtime`), without the real on-device libmonoos_runtime.so present.
+# OFF by default: a plain `cargo build` targets the real device runtime, as
+# it must for anything actually shipped. See sdk/rust/Cargo.toml and
+# sdk/rust/src/mock_runtime.rs.
+mock-runtime = ["monoos-sdk/mock-runtime"]
+
+[profile.release]
+opt-level     = "z"
+lto           = true
+codegen-units = 1
+strip         = true

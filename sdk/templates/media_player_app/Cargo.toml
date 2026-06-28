@@ -1,0 +1,22 @@
+[package]
+name    = "mediaplayerapp"
+version = "1.0.0"
+edition = "2021"
+autobins = false
+
+[lib]
+crate-type = ["cdylib"]
+path        = "src/main.rs"
+
+[dependencies]
+monoos-sdk = { version = "1.0", path = "../../rust" }
+
+[features]
+# See sdk/templates/basic_app/Cargo.toml for the rationale.
+mock-runtime = ["monoos-sdk/mock-runtime"]
+
+[profile.release]
+opt-level     = "z"
+lto           = true
+codegen-units = 1
+strip         = true
