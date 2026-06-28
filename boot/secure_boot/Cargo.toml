@@ -1,0 +1,41 @@
+[package]
+name        = "monoos-secure-boot"
+version     = "1.0.0"
+edition     = "2021"
+authors     = ["DudasCorp"]
+description = "MonoOS Verified Boot 2.0 implementation"
+license     = "SEE LICENSE IN ../../LICENSE.txt"
+
+[lib]
+name       = "monoos_secure_boot"
+path       = "boot_validator.rs"
+crate-type = ["staticlib", "rlib"]
+
+[dependencies]
+heapless = { version = "0.8", default-features = false }
+
+[features]
+# Enabled by host-side test crates (see testing/unit/secure_boot_tests)
+# so the crate can be built and unit tested with the standard library.
+# Left disabled by default and NOT enabled by build_bootloader.sh, so the
+# real freestanding bootloader build stays #![no_std].
+std = []
+# Enabled by build_bootloader.sh when linking secure_boot together with
+# boot_manager into the single bootloader.elf. Only one #[panic_handler]
+# may exist in a link unit; boot_manager's is the one that's kept, so
+# secure_boot suppresses its own when this feature is on. Left OFF by
+# default so `cargo build -p monoos-secure-boot` still produces a complete,
+# independently-linkable staticlib during standalone development/testing.
+external_panic_handler = []
+
+[profile.release]
+opt-level     = "z"
+lto           = true
+codegen-units = 1
+panic         = "abort"
+strip         = true
+
+# Note: panic="abort" is intentionally NOT set for [profile.dev]. See
+# boot/boot_manager/Cargo.toml for the rationale — the real freestanding
+# build already forces it via RUSTFLAGS, and omitting it here lets
+# `cargo test` run on the host.

@@ -1,0 +1,37 @@
+[package]
+name        = "monoos-recovery"
+version     = "1.0.0"
+edition     = "2021"
+authors     = ["DudasCorp"]
+description = "MonoOS recovery environment"
+license     = "SEE LICENSE IN ../../LICENSE.txt"
+
+[lib]
+name       = "monoos_recovery"
+path       = "recovery_main.rs"
+crate-type = ["staticlib", "rlib"]
+
+[dependencies]
+heapless = { version = "0.8", default-features = false }
+bitflags = { version = "2.4", default-features = false }
+
+[features]
+# Enabled by host-side test crates (see testing/unit/recovery_tests) so the
+# crate can be built and unit tested with the standard library. Left
+# disabled by default and NOT enabled by build_recovery.sh, so the real
+# freestanding recovery build stays #![no_std]. Mirrors the convention in
+# boot/boot_manager and boot/secure_boot.
+std = []
+
+[profile.release]
+opt-level     = "z"
+lto           = true
+codegen-units = 1
+panic         = "abort"
+strip         = true
+
+# Note: panic="abort" is intentionally NOT set for [profile.dev]. The real
+# freestanding recovery build (build/scripts/build_recovery.sh) forces it
+# via RUSTFLAGS="-C panic=abort" for the no_std target. Leaving the default
+# unwind panic strategy for [profile.dev] allows `cargo test` to run on the
+# host (the std test harness relies on unwinding to catch test failures).
